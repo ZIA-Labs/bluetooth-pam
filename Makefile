@@ -2,7 +2,7 @@
 ROOTDISK := /dev/disk3s1
 
 mac:
-	gcc -dynamiclib -fPIC -fno-stack-protector src/zia_auth.c -o zia_auth.so -lpam
+	gcc -dynamiclib -fPIC -fno-stack-protector src/zia_auth.c -o zia_auth.so -lpam -lcurl
 
 macinstall:
 	sudo mkdir -p /opt/zialabs/usr/lib/pam
